@@ -75,7 +75,7 @@ namespace PSArcTool
                         }
                     }
                     Run(
-                        string.Format("create -a --zlib --inputfile={0} --output={1}", tmpFilePath, "psarc.pak"),
+                        string.Format("create -a --zlib --inputfile=\"{0}\" --output={1}", tmpFilePath, "psarc.pak"),
                         rootPath);
                 }
             }
