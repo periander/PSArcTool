@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs/PSArcTool/v14
+/PSArcTool/obj
+/PSArcTool/bin/Debug
+
+/PSArcTool/bin/Release
