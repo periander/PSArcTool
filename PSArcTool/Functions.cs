@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
@@ -71,7 +72,17 @@ namespace PSArcTool
                     {
                         foreach (var filePath in filePaths)
                         {
-                            writer.WriteLine(filePath);
+                            // Needs to be relative paths??
+                            var relPath = filePath;
+                            //if (relPath.StartsWith(rootPath, StringComparison.OrdinalIgnoreCase))
+                            //{
+                            //    relPath = filePath.Remove(0, rootPath.Length);
+                            //    if (relPath.StartsWith("\\"))
+                            //    {
+                            //        relPath = relPath.Substring(1);
+                            //    }
+                            //}
+                            writer.WriteLine(relPath);
                         }
                     }
                     Run(

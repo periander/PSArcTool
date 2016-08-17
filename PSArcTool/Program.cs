@@ -24,6 +24,20 @@ namespace PSArcTool
                     Console.WriteLine(arg);
                 }
 
+
+                //// TESTING 
+                //args = new[]
+                //{
+                //    @"C:\Program Files (x86)\Steam\steamapps\common\No Man's Sky\GAMEDATA\PCBANKS\PSARC.PAK"
+                //    //@"C:\Program Files (x86)\Steam\steamapps\common\No Man's Sky\GAMEDATA\PCBANKS\A.txt",
+                //    //@"C:\Program Files (x86)\Steam\steamapps\common\No Man's Sky\GAMEDATA\PCBANKS\B.txt"
+
+                //    //@"C:\Users\peria\Desktop\New folder\SF\psarc.pak"
+                //    //@"C:\Users\peria\Desktop\New folder\SF\A.txt",
+                //    //@"C:\Users\peria\Desktop\New folder\SF\B.txt"
+
+                //};
+
                 if (args.Any() &&
                     args.All(arg => File.Exists(arg) && (arg.EndsWith(".pak", StringComparison.OrdinalIgnoreCase) || arg.EndsWith(".psarc", StringComparison.OrdinalIgnoreCase))))
                 {
