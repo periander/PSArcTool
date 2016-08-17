@@ -25,7 +25,7 @@ namespace PSArcTool
                 }
 
                 if (args.Any() &&
-                    args.All(arg => File.Exists(arg) && arg.EndsWith(".pak", StringComparison.OrdinalIgnoreCase)))
+                    args.All(arg => File.Exists(arg) && (arg.EndsWith(".pak", StringComparison.OrdinalIgnoreCase) || arg.EndsWith(".psarc", StringComparison.OrdinalIgnoreCase))))
                 {
                     foreach (var pakFilePath in args)
                     {
@@ -41,7 +41,7 @@ namespace PSArcTool
                 {
                     waitForEnter = true;
                     Console.WriteLine(
-                        "Usage: Pass PAK files as arguments to extract (click and drag on to PSArcTool). Pass anything else to create a PAK file.");
+                        "Usage: Pass PAK/PSARC files as arguments to extract (click and drag on to PSArcTool). Pass anything else to create a PAK file.");
                 }
 
             }
